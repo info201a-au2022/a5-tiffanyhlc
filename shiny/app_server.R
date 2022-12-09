@@ -32,7 +32,7 @@ server <- function(input, output) {
   
 emissions_df_summary <- emissions_df %>%
 group_by(country) %>%
-filter( year==max(year) ) %>%
+filter( year==max(year)) %>%
 ungroup()
 
 #summary values (3)
@@ -63,6 +63,8 @@ output$scatter <- renderPlot({
   })
 output$scatter_caption <- renderText(paste("This visualization is a scatterplot that
                                      displays the trends of countries'", input$y, 
-                                     "based on their", input$x, "by year", input$year))
+                                     "based on their", input$x, "by year", input$year, "."))
+output$scatter_caption2 <- renderText(paste("Observe each scatterplot individually to determine 
+                                            the correlation between two variables in a given year."))
 }
 
