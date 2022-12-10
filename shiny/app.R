@@ -10,8 +10,8 @@
 library(shiny)
 library(tidyverse)
 
-source("/Users/tiffanychung/Documents/info201/Assignments/a5-tiffanyhlc/shiny/app_ui.R")
-source("/Users/tiffanychung/Documents/info201/Assignments/a5-tiffanyhlc/shiny/app_server.R")
+source("app_ui.R")
+source("app_server.R")
 
 # Run the application 
 shinyApp(ui = ui, server = server)
